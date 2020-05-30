@@ -14,7 +14,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
 #     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 elseif (CMAKE_SYSTEM_NAME MATCHES "Darwin")
 #     set(APUE /Users/mengshen/Project/apue)
-    set(Qt5_DIR /usr/local/Cellar/qt/5.14.0/lib/cmake/Qt5)
+#    set(Qt5_DIR /usr/local/Cellar/qt/5.14.0/lib/cmake/Qt5)
 endif ()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
