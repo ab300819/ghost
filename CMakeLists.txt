@@ -31,6 +31,9 @@ include_directories("${PROJECT_SOURCE_DIR}/src/framework/interface")
 #        src/widget/widget.ui)
 #target_link_libraries(main_ui Qt5::Widgets)
 
-add_library(common "src/framework/common/base_application.cpp" "src/framework/common/main.cpp")
+add_library(common 
+    "src/framework/common/base_application.cpp" 
+    "src/framework/common/graph_manager.cpp" 
+    "src/framework/common/main.cpp")
 add_executable(empty "src/empty/emptyApplication.cpp")
 target_link_libraries(empty common)
