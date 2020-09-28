@@ -35,5 +35,5 @@ add_library(common
     "src/framework/common/base_application.cpp" 
     "src/framework/common/graph_manager.cpp" 
     "src/framework/common/main.cpp")
-add_executable(empty "src/empty/emptyApplication.cpp")
+add_executable(empty "src/empty/empty_application.cpp")
 target_link_libraries(empty common)
