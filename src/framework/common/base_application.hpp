@@ -1,29 +1,15 @@
 #pragma once
-#ifndef _BASE_APPLICATION_
-#define _BASE_APPLICATION_
 
-#include "application.h"
-
+#include "application.hpp"
 namespace ghost {
-class BaseApplication : public Application {
+class BaseApplication : public IApplication {
 public:
 	virtual int initialize();
 	virtual void finalize();
 	virtual void tick();
 	virtual bool isQuit();
+
+protected:
+	bool m_bQuit;
 };
-
-int BaseApplication::initialize() {
-	quitFlag = false;
-	return 0;
-}
-
-void BaseApplication::finalize() {}
-void BaseApplication::tick() {}
-bool BaseApplication::isQuit() {
-	return quitFlag;
-}
-
 }  // namespace ghost
-
-#endif	// _BASE_APPLICATION_

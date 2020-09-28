@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.13.0)
 project(ghost CXX)
-
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #set(CMAKE_AUTOUIC ON)
 #set(CMAKE_AUTOMOC ON)
@@ -22,6 +21,9 @@ endif ()
 include_directories("${PROJECT_SOURCE_DIR}/src/framework/common")
 include_directories("${PROJECT_SOURCE_DIR}/src/framework/interface")
 
+#add_subdirectory("src/framework")
+#add_subdirectory("src/empty")
+
 #add_executable(main_ui
 #        src/test/main_ui.cpp
 #        src/widget/widget.cpp
@@ -29,7 +31,6 @@ include_directories("${PROJECT_SOURCE_DIR}/src/framework/interface")
 #        src/widget/widget.ui)
 #target_link_libraries(main_ui Qt5::Widgets)
 
-# add_library(common src/framework/common/base_application.cpp src/framework/common/main.cpp)
-
-# add_executable(ghost src/test/TestApplication.cpp)
-# target_link_libraries(ghost common)
+add_library(common "src/framework/common/base_application.cpp" "src/framework/common/main.cpp")
+add_executable(empty "src/empty/emptyApplication.cpp")
+target_link_libraries(empty common)

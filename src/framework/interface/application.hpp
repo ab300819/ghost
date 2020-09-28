@@ -1,11 +1,9 @@
 #pragma once
-#ifndef _APPLICATION_
-#define _APPLICATION_
 
-#include "runtime_module.h"
+#include "runtime_module.hpp"
 
 namespace ghost {
-class Application : public RuntimeModule {
+class IApplication : public IRuntimeModule {
 public:
 	virtual int initialize() = 0;
 	virtual void finalize() = 0;
@@ -16,5 +14,3 @@ protected:
 	bool quitFlag;
 };
 }  // namespace ghost
-
-#endif	// _APPLICATION_

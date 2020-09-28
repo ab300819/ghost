@@ -1,22 +1,22 @@
 #include <iostream>
-#include "application.h"
+#include "application.hpp"
 
 namespace ghost {
-extern Application* app;
+extern IApplication* g_pApp;
 }
 
 int main(int argc, char** argv) {
 	int ret;
-	if ((ret = ghost::app->initialize()) != 0) {
+	if ((ret = ghost::g_pApp->initialize()) != 0) {
 		std::cout << "App Initialize failed, will exit now." << std::endl;
 		return ret;
 	}
 
-	while (!ghost::app->isQuit()) {
-		ghost::app->tick();
+	while (!ghost::g_pApp->isQuit()) {
+		ghost::g_pApp->tick();
 	}
 
-	ghost::app->finalize();
+	ghost::g_pApp->finalize();
 
-	return 0;
+	return EXIT_SUCCESS;
 }
