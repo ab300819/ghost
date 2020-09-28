@@ -1,9 +1,9 @@
 #pragma once
 
-#include "runtime_module.h"
+#include "runtime_module.hpp"
 
 namespace ghost {
-class GraphManager : public RuntimeModule {
+class GraphManager : public IRuntimeModule {
 public:
 	virtual ~GraphManager() {}
 };
