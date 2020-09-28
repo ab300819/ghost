@@ -32,10 +32,13 @@ add_library(common
 
 add_executable(main_ui
         src/widget/main_ui.cpp
-        src/widget/widget.cpp
         src/widget/widget.h
+        src/widget/widget.cpp
+        src/widget/paint_widget.h
+        src/widget/paint_widget.cpp
         src/widget/widget.ui)
-target_link_libraries(main_ui Qt5::Widgets
+target_link_libraries(main_ui
+        Qt5::Widgets
         common)
 target_link_libraries(main_ui common)
 
