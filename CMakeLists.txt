@@ -31,7 +31,7 @@ add_library(common
         "src/framework/common/main.cpp")
 
 add_executable(main_ui
-        src/test/main_ui.cpp
+        src/widget/main_ui.cpp
         src/widget/widget.cpp
         src/widget/widget.h
         src/widget/widget.ui)
