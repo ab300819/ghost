@@ -11,7 +11,13 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "intelliSenseMode": "windows-msvc-x64",
-      "variables": []
+      "variables": [
+        {
+          "name": "Qt5_DIR",
+          "value": "C:\\Users\\mengshen\\Documents\\source\\qt\\5.15.0\\msvc2019_64\\lib\\cmake\\Qt5",
+          "type": "PATH"
+        }
+      ]
     }
   ]
 }
