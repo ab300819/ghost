@@ -11,5 +11,18 @@
 #include <QOpenGLWidget>
 
 class PaintWidget : public QOpenGLWidget {
+	Q_OBJECT
+public:
+	PaintWidget(QWidget *parent);
+	~PaintWidget();
 
+protected:
+	void initializeGL();
+	void paintGL();
+	void resizeGL(int w, int h);
+
+private:
+	QOpenGLBuffer *m_vbo;
+	QOpenGLVertexArrayObject *m_vao;
+	QOpenGLShaderProgram *m_shader;
 };
