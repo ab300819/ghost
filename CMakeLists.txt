@@ -26,14 +26,14 @@ include_directories("${PROJECT_SOURCE_DIR}/src/framework/interface")
 
 
 add_library(common
+        "src/framework/common/allocator.cpp"
         "src/framework/common/base_application.cpp"
         "src/framework/common/graph_manager.cpp"
         "src/framework/common/main.cpp")
 
 add_executable(main_ui
-        src/widget/main_ui.cpp
-        src/widget/paint_widget.h
-        src/widget/paint_widget.cpp)
+        "src/widget/main_ui.cpp"
+        "src/widget/paint_widget.cpp")
 target_link_libraries(main_ui
         Qt5::Widgets
         common)
